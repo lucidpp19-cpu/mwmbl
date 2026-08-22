@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd front-end && npm run build",
+  "buildCommand": "pnpm --dir front-end run build",
   "outputDirectory": "front-end/dist",
-  "installCommand": "cd front-end && pnpm install --frozen-lockfile",
+  "installCommand": "pnpm --dir front-end install --frozen-lockfile",
   "framework": null,
   "cleanUrls": true
 }
