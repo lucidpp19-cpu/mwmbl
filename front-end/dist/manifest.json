@@ -1,0 +1,180 @@
+{
+  "index-legacy.js": {
+    "file": "assets/index-legacy.298f21f8.js",
+    "src": "index-legacy.js",
+    "isEntry": true,
+    "imports": [
+      "_modulepreload-polyfill-legacy.8dcb0a50.js"
+    ],
+    "dynamicImports": [
+      "utils/suggestions-legacy.js",
+      "components/molecules/add-button-legacy.js",
+      "components/molecules/add-result-legacy.js",
+      "components/molecules/result-legacy.js"
+    ]
+  },
+  "stats/index-legacy.html": {
+    "file": "assets/stats-legacy.298d90b1.js",
+    "src": "stats/index-legacy.html",
+    "isEntry": true,
+    "imports": [
+      "_modulepreload-polyfill-legacy.8dcb0a50.js"
+    ]
+  },
+  "terms-and-conditions/index-legacy.html": {
+    "file": "assets/terms-legacy.935f818a.js",
+    "src": "terms-and-conditions/index-legacy.html",
+    "isEntry": true
+  },
+  "data-privacy/index-legacy.html": {
+    "file": "assets/privacy-legacy.5ae5d02a.js",
+    "src": "data-privacy/index-legacy.html",
+    "isEntry": true
+  },
+  "_modulepreload-polyfill-legacy.8dcb0a50.js": {
+    "file": "assets/modulepreload-polyfill-legacy.8dcb0a50.js"
+  },
+  "utils/suggestions-legacy.js": {
+    "file": "assets/suggestions-legacy.2275465f.js",
+    "src": "utils/suggestions-legacy.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_config-legacy.5a1aa35d.js"
+    ]
+  },
+  "_config-legacy.5a1aa35d.js": {
+    "file": "assets/config-legacy.5a1aa35d.js"
+  },
+  "components/molecules/add-button-legacy.js": {
+    "file": "assets/add-button-legacy.e27bdb28.js",
+    "src": "components/molecules/add-button-legacy.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_define-legacy.db730405.js",
+      "_config-legacy.5a1aa35d.js"
+    ]
+  },
+  "_define-legacy.db730405.js": {
+    "file": "assets/define-legacy.db730405.js",
+    "imports": [
+      "_config-legacy.5a1aa35d.js"
+    ]
+  },
+  "components/molecules/add-result-legacy.js": {
+    "file": "assets/add-result-legacy.98e446e0.js",
+    "src": "components/molecules/add-result-legacy.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_define-legacy.db730405.js",
+      "index-legacy.js",
+      "_config-legacy.5a1aa35d.js",
+      "_modulepreload-polyfill-legacy.8dcb0a50.js"
+    ]
+  },
+  "components/molecules/result-legacy.js": {
+    "file": "assets/result-legacy.2ea57fcd.js",
+    "src": "components/molecules/result-legacy.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_define-legacy.db730405.js",
+      "index-legacy.js",
+      "_config-legacy.5a1aa35d.js",
+      "_modulepreload-polyfill-legacy.8dcb0a50.js"
+    ]
+  },
+  "../vite/legacy-polyfills-legacy": {
+    "file": "assets/polyfills-legacy.00891307.js",
+    "src": "../vite/legacy-polyfills-legacy",
+    "isEntry": true
+  },
+  "index.js": {
+    "file": "assets/index.9d06fe92.js",
+    "src": "index.js",
+    "isEntry": true,
+    "imports": [
+      "_modulepreload-polyfill.c7c6310f.js"
+    ],
+    "dynamicImports": [
+      "utils/suggestions.js",
+      "components/molecules/add-button.js",
+      "components/molecules/add-result.js",
+      "components/molecules/result.js"
+    ]
+  },
+  "stats/index.html": {
+    "file": "assets/stats.939bdb6f.js",
+    "src": "stats/index.html",
+    "isEntry": true,
+    "imports": [
+      "_modulepreload-polyfill.c7c6310f.js"
+    ],
+    "css": [
+      "assets/index.9382e6a7.css"
+    ]
+  },
+  "terms-and-conditions/index.html": {
+    "file": "assets/terms.81e4e850.js",
+    "src": "terms-and-conditions/index.html",
+    "isEntry": true
+  },
+  "data-privacy/index.html": {
+    "file": "assets/privacy.0545f4f3.js",
+    "src": "data-privacy/index.html",
+    "isEntry": true
+  },
+  "_modulepreload-polyfill.c7c6310f.js": {
+    "file": "assets/modulepreload-polyfill.c7c6310f.js"
+  },
+  "utils/suggestions.js": {
+    "file": "assets/suggestions.303fac49.js",
+    "src": "utils/suggestions.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_config.4d6779e6.js"
+    ]
+  },
+  "_config.4d6779e6.js": {
+    "file": "assets/config.4d6779e6.js"
+  },
+  "components/molecules/add-button.js": {
+    "file": "assets/add-button.d527100b.js",
+    "src": "components/molecules/add-button.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_define.364a5835.js",
+      "_config.4d6779e6.js"
+    ]
+  },
+  "_define.364a5835.js": {
+    "file": "assets/define.364a5835.js",
+    "imports": [
+      "_config.4d6779e6.js"
+    ]
+  },
+  "components/molecules/add-result.js": {
+    "file": "assets/add-result.79fa21fa.js",
+    "src": "components/molecules/add-result.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_define.364a5835.js",
+      "index.js",
+      "_config.4d6779e6.js",
+      "_modulepreload-polyfill.c7c6310f.js"
+    ]
+  },
+  "components/molecules/result.js": {
+    "file": "assets/result.b807bff3.js",
+    "src": "components/molecules/result.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_define.364a5835.js",
+      "index.js",
+      "_config.4d6779e6.js",
+      "_modulepreload-polyfill.c7c6310f.js"
+    ]
+  },
+  "stats/index.css": {
+    "file": "assets/index.9382e6a7.css",
+    "src": "stats/index.css"
+  }
+}
