@@ -1,7 +1,7 @@
 {
-  "index-legacy.js": {
-    "file": "assets/index-legacy.298f21f8.js",
-    "src": "index-legacy.js",
+  "index-legacy.html": {
+    "file": "assets/index-legacy.31d401a4.js",
+    "src": "index-legacy.html",
     "isEntry": true,
     "imports": [
       "_modulepreload-polyfill-legacy.8dcb0a50.js"
@@ -61,23 +61,23 @@
     ]
   },
   "components/molecules/add-result-legacy.js": {
-    "file": "assets/add-result-legacy.98e446e0.js",
+    "file": "assets/add-result-legacy.2d841571.js",
     "src": "components/molecules/add-result-legacy.js",
     "isDynamicEntry": true,
     "imports": [
       "_define-legacy.db730405.js",
-      "index-legacy.js",
+      "index-legacy.html",
       "_config-legacy.5a1aa35d.js",
       "_modulepreload-polyfill-legacy.8dcb0a50.js"
     ]
   },
   "components/molecules/result-legacy.js": {
-    "file": "assets/result-legacy.2ea57fcd.js",
+    "file": "assets/result-legacy.06995435.js",
     "src": "components/molecules/result-legacy.js",
     "isDynamicEntry": true,
     "imports": [
       "_define-legacy.db730405.js",
-      "index-legacy.js",
+      "index-legacy.html",
       "_config-legacy.5a1aa35d.js",
       "_modulepreload-polyfill-legacy.8dcb0a50.js"
     ]
@@ -87,9 +87,9 @@
     "src": "../vite/legacy-polyfills-legacy",
     "isEntry": true
   },
-  "index.js": {
-    "file": "assets/index.9d06fe92.js",
-    "src": "index.js",
+  "index.html": {
+    "file": "assets/index.cdd36453.js",
+    "src": "index.html",
     "isEntry": true,
     "imports": [
       "_modulepreload-polyfill.c7c6310f.js"
@@ -152,23 +152,23 @@
     ]
   },
   "components/molecules/add-result.js": {
-    "file": "assets/add-result.79fa21fa.js",
+    "file": "assets/add-result.8baa0bde.js",
     "src": "components/molecules/add-result.js",
     "isDynamicEntry": true,
     "imports": [
       "_define.364a5835.js",
-      "index.js",
+      "index.html",
       "_config.4d6779e6.js",
       "_modulepreload-polyfill.c7c6310f.js"
     ]
   },
   "components/molecules/result.js": {
-    "file": "assets/result.b807bff3.js",
+    "file": "assets/result.a1cc0885.js",
     "src": "components/molecules/result.js",
     "isDynamicEntry": true,
     "imports": [
       "_define.364a5835.js",
-      "index.js",
+      "index.html",
       "_config.4d6779e6.js",
       "_modulepreload-polyfill.c7c6310f.js"
     ]

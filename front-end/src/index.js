@@ -7,7 +7,11 @@
  */
 import 'vite/modulepreload-polyfill';
 import {setupResultsLoadedListener} from "./utils/events.js";
+import {setupStartupLoader} from "./utils/startup-loader.js";
 import {setupLocalAI} from "./utils/local-ai.js";
+
+setupStartupLoader();
+setupLocalAI();
 
 // Waiting for top-level await to be better supported.
 (async () => {
@@ -16,8 +20,6 @@ import {setupLocalAI} from "./utils/local-ai.js";
   const redirected = redirectToSuggestions();
   setupResultsLoadedListener();
   if (!redirected) {
-    setupLocalAI();
-
     // Load components only after redirects are checked.
     import("./components/molecules/add-button.js");
     import("./components/molecules/add-result.js");

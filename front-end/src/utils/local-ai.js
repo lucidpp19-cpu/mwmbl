@@ -4,6 +4,7 @@ const MODEL = 'Llama-3.2-1B-Instruct-q4f16_1-MLC';
 let enginePromise;
 
 function setStatus(text, state = 'idle') {
+  window.dispatchEvent(new CustomEvent('mwmbl:model-status', { detail: { text, state } }));
   const status = document.querySelector('[data-local-ai-status]');
   if (status) {
     status.textContent = text;
@@ -16,15 +17,19 @@ async function getEngine() {
     setStatus('Downloading local model…', 'loading');
     enginePromise = CreateMLCEngine(MODEL, {
       initProgressCallback: (progress) => {
-        const percent = Math.round((progress.progress || 0) * 100);
-        setStatus(`Local model ${percent}%`, 'loading');
+        const value = Number(progress.progress || 0);
+        const percent = Math.round(value * 100);
+        window.dispatchEvent(new CustomEvent('mwmbl:model-progress', { detail: { progress: value } }));
+        setStatus(`Downloading local model ${percent}%`, 'loading');
       },
     }).then((engine) => {
       setStatus('Local AI ready', 'ready');
+      window.dispatchEvent(new CustomEvent('mwmbl:model-ready'));
       return engine;
     }).catch((error) => {
       enginePromise = undefined;
       setStatus('Local AI unavailable — search still works', 'error');
+      window.dispatchEvent(new CustomEvent('mwmbl:model-error'));
       throw error;
     });
   }
@@ -62,25 +67,14 @@ async function enrichSearch(query) {
 
 export function setupLocalAI() {
   const input = document.querySelector('.search-bar-input');
-  const button = document.querySelector('[data-local-ai-toggle]');
-  if (!input || !button) return;
-
-  if (!navigator.gpu) {
-    button.disabled = true;
-    button.title = 'WebGPU is required for local AI';
-    setStatus('WebGPU unavailable', 'error');
+  if (!input || !navigator.gpu) {
+    window.dispatchEvent(new CustomEvent('mwmbl:model-error'));
     return;
   }
 
-  button.addEventListener('click', async () => {
-    button.disabled = true;
-    try {
-      await getEngine();
-      await enrichSearch(input.value.trim());
-    } finally {
-      button.disabled = false;
-    }
+  getEngine().catch(() => {});
+  document.body.addEventListener('htmx:afterSwap', () => {
+    if (input.value.trim()) enrichSearch(input.value.trim());
   });
-
   input.addEventListener('change', () => enrichSearch(input.value.trim()));
 }
