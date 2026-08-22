@@ -12,7 +12,7 @@ export default {
     manifest: true,
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'src/index.js'),
+        index: resolve(__dirname, 'src/index.html'),
         stats: resolve(__dirname, 'src/stats/index.html'),
         terms: resolve(__dirname, 'src/terms-and-conditions/index.html'),
         privacy: resolve(__dirname, 'src/data-privacy/index.html'),

@@ -1,7 +1,7 @@
 {
-  "index-legacy.js": {
+  "index-legacy.html": {
     "file": "assets/index-legacy.298f21f8.js",
-    "src": "index-legacy.js",
+    "src": "index-legacy.html",
     "isEntry": true,
     "imports": [
       "_modulepreload-polyfill-legacy.8dcb0a50.js"
@@ -66,7 +66,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_define-legacy.db730405.js",
-      "index-legacy.js",
+      "index-legacy.html",
       "_config-legacy.5a1aa35d.js",
       "_modulepreload-polyfill-legacy.8dcb0a50.js"
     ]
@@ -77,7 +77,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_define-legacy.db730405.js",
-      "index-legacy.js",
+      "index-legacy.html",
       "_config-legacy.5a1aa35d.js",
       "_modulepreload-polyfill-legacy.8dcb0a50.js"
     ]
@@ -87,9 +87,9 @@
     "src": "../vite/legacy-polyfills-legacy",
     "isEntry": true
   },
-  "index.js": {
+  "index.html": {
     "file": "assets/index.9d06fe92.js",
-    "src": "index.js",
+    "src": "index.html",
     "isEntry": true,
     "imports": [
       "_modulepreload-polyfill.c7c6310f.js"
@@ -157,7 +157,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_define.364a5835.js",
-      "index.js",
+      "index.html",
       "_config.4d6779e6.js",
       "_modulepreload-polyfill.c7c6310f.js"
     ]
@@ -168,7 +168,7 @@
     "isDynamicEntry": true,
     "imports": [
       "_define.364a5835.js",
-      "index.js",
+      "index.html",
       "_config.4d6779e6.js",
       "_modulepreload-polyfill.c7c6310f.js"
     ]
