@@ -1,6 +1,6 @@
 {
   "index-legacy.html": {
-    "file": "assets/index-legacy.298f21f8.js",
+    "file": "assets/index-legacy.27de5b06.js",
     "src": "index-legacy.html",
     "isEntry": true,
     "imports": [
@@ -61,7 +61,7 @@
     ]
   },
   "components/molecules/add-result-legacy.js": {
-    "file": "assets/add-result-legacy.98e446e0.js",
+    "file": "assets/add-result-legacy.8be3932b.js",
     "src": "components/molecules/add-result-legacy.js",
     "isDynamicEntry": true,
     "imports": [
@@ -72,7 +72,7 @@
     ]
   },
   "components/molecules/result-legacy.js": {
-    "file": "assets/result-legacy.2ea57fcd.js",
+    "file": "assets/result-legacy.e58d612f.js",
     "src": "components/molecules/result-legacy.js",
     "isDynamicEntry": true,
     "imports": [
@@ -83,12 +83,12 @@
     ]
   },
   "../vite/legacy-polyfills-legacy": {
-    "file": "assets/polyfills-legacy.00891307.js",
+    "file": "assets/polyfills-legacy.12dd2fa5.js",
     "src": "../vite/legacy-polyfills-legacy",
     "isEntry": true
   },
   "index.html": {
-    "file": "assets/index.9d06fe92.js",
+    "file": "assets/index.dcfb6053.js",
     "src": "index.html",
     "isEntry": true,
     "imports": [
@@ -152,7 +152,7 @@
     ]
   },
   "components/molecules/add-result.js": {
-    "file": "assets/add-result.79fa21fa.js",
+    "file": "assets/add-result.4066298f.js",
     "src": "components/molecules/add-result.js",
     "isDynamicEntry": true,
     "imports": [
@@ -163,7 +163,7 @@
     ]
   },
   "components/molecules/result.js": {
-    "file": "assets/result.b807bff3.js",
+    "file": "assets/result.16d9faba.js",
     "src": "components/molecules/result.js",
     "isDynamicEntry": true,
     "imports": [

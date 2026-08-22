@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="/css/global.css" />
   </head>
   <body>
+    <div class="startup-loader" data-startup-loader role="status" aria-live="polite">
+      <div class="startup-loader-card">
+        <div class="ios-spinner" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <p class="startup-loader-label">Preparing Mwmbl</p>
+        <p class="startup-loader-percent" data-loader-percent>0%</p>
+        <p class="startup-loader-quote" data-loader-quote>Next time, it will be 5x faster.</p>
+      </div>
+    </div>
     <mwmbl-app></mwmbl-app>
     <header class="search-menu compact">
       <a href="/" class="branding">
@@ -22,15 +30,13 @@
         <i class="ph-magnifying-glass-bold"></i>
         <input type="search" name="q" class="search-bar-input" placeholder="Search on Mwmbl..." autocomplete="off" />
       </form>
-      <button type="button" class="local-ai-toggle" data-local-ai-toggle aria-label="Use local AI to improve result ranking">Local AI</button>
-      <span class="local-ai-status" data-local-ai-status role="status">AI off</span>
       <a class="button" href="/accounts/login/">Login</a>
       <a class="button" href="/accounts/signup/">Sign up</a>
     </header>
     <main><div class="main">
       <h1>Welcome to Mwmbl</h1>
       <p>The free, open-source and non-profit search engine.</p>
-      <p>Search the community-built index above, or enable Local AI to improve result ranking using your device.</p>
+      <p>Search the community-built index above.</p>
     </div></main>
     <script type="module" src="./index.js"></script>
   </body>

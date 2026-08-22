@@ -53,7 +53,7 @@
         <img class="brand-icon" src="/static/images/logo.svg" width="40" height="40" alt="mwmbl logo">
         <span class="brand-title">Mwmbl</span>
       </a>
-      <form class="search-bar">
+      <form class="search-bar" method="get" action="/app/home/">
         <i class="ph-magnifying-glass-bold"></i>
         <input
           type='search'
@@ -64,12 +64,11 @@
           autocomplete='off'
           value='{{ query|default_if_none:"" }}'
           hx-get="/app/home/"
-          hx-trigger="keyup changed delay:100ms"
+          hx-trigger="keyup changed delay:300ms, search"
           hx-target=".main"
+          hx-push-url="true"
         >
         </form>
-        <button type="button" class="local-ai-toggle" data-local-ai-toggle aria-label="Use local AI to improve result ranking">Local AI</button>
-        <span class="local-ai-status" data-local-ai-status role="status">AI off</span>
       {%  if user.is_authenticated %}
         <p class="login-info">Logged in as {{ user.username }}</p>
         <a class="button" href="/accounts/logout/">Log out</a>

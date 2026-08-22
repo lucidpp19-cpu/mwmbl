@@ -96,37 +96,83 @@ body {
   box-shadow: 0 0 0 0.2rem var(--primary-color);
 }
 
-.local-ai-toggle {
-  margin-left: 8px;
-  border: 1px solid var(--primary-color);
-  border-radius: 8px;
-  padding: 8px 10px;
-  color: var(--primary-color);
-  background: transparent;
-  font: inherit;
-  font-size: .8rem;
-  cursor: pointer;
+.startup-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: var(--background-color);
+  transition: opacity 260ms ease, visibility 260ms ease;
 }
 
-.local-ai-toggle:disabled {
-  cursor: not-allowed;
-  opacity: .45;
+.startup-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.local-ai-status {
-  min-width: 92px;
-  margin-left: 8px;
-  color: var(--dark-gray-color);
-  font-size: .72rem;
-  white-space: nowrap;
+.startup-loader-card {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  width: min(290px, calc(100vw - 40px));
+  padding: 28px 24px;
+  border-radius: 22px;
+  background: var(--gray-color);
+  text-align: center;
+  box-shadow: 0 14px 40px rgb(0 0 0 / 12%);
 }
 
-.local-ai-status[data-state="ready"] {
-  color: var(--primary-color);
+.ios-spinner {
+  position: relative;
+  width: 34px;
+  height: 34px;
 }
 
-.local-ai-status[data-state="error"] {
-  color: var(--dark-gray-color);
+.ios-spinner span {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 4px;
+  height: 10px;
+  border-radius: 4px;
+  background: var(--dark-color);
+  transform-origin: 2px 17px;
+  animation: ios-spinner-fade 1s linear infinite;
+}
+
+.ios-spinner span:nth-child(1) { transform: rotate(0deg); animation-delay: 0s; }
+.ios-spinner span:nth-child(2) { transform: rotate(30deg); animation-delay: -.916s; }
+.ios-spinner span:nth-child(3) { transform: rotate(60deg); animation-delay: -.833s; }
+.ios-spinner span:nth-child(4) { transform: rotate(90deg); animation-delay: -.75s; }
+.ios-spinner span:nth-child(5) { transform: rotate(120deg); animation-delay: -.666s; }
+.ios-spinner span:nth-child(6) { transform: rotate(150deg); animation-delay: -.583s; }
+.ios-spinner span:nth-child(7) { transform: rotate(180deg); animation-delay: -.5s; }
+.ios-spinner span:nth-child(8) { transform: rotate(210deg); animation-delay: -.416s; }
+.ios-spinner span:nth-child(9) { transform: rotate(240deg); animation-delay: -.333s; }
+.ios-spinner span:nth-child(10) { transform: rotate(270deg); animation-delay: -.25s; }
+.ios-spinner span:nth-child(11) { transform: rotate(300deg); animation-delay: -.166s; }
+.ios-spinner span:nth-child(12) { transform: rotate(330deg); animation-delay: -.083s; }
+
+@keyframes ios-spinner-fade {
+  0%, 39%, 100% { opacity: .25; }
+  40% { opacity: 1; }
+}
+
+.startup-loader-label,
+.startup-loader-percent,
+.startup-loader-quote {
+  margin: 0;
+}
+
+.startup-loader-label { font-weight: var(--bold-font-weight); }
+.startup-loader-percent { font-size: 1.7rem; font-weight: var(--bold-font-weight); color: var(--primary-color); }
+.startup-loader-quote { color: var(--dark-gray-color); font-size: .82rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ios-spinner span { animation: none; opacity: .7; }
+  .startup-loader { transition: none; }
 }
 
 .search-bar i {
