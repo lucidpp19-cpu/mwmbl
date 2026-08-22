@@ -3,5 +3,9 @@
   "outputDirectory": "dist",
   "installCommand": "corepack pnpm@10.34.3 install --frozen-lockfile",
   "framework": null,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/static", "destination": "/" },
+    { "source": "/static/(.*)", "destination": "/$1" }
+  ]
 }

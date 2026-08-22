@@ -1,6 +1,6 @@
 {
   "index-legacy.html": {
-    "file": "assets/index-legacy.298f21f8.js",
+    "file": "assets/index-legacy.faddf883.js",
     "src": "index-legacy.html",
     "isEntry": true,
     "imports": [
@@ -61,7 +61,7 @@
     ]
   },
   "components/molecules/add-result-legacy.js": {
-    "file": "assets/add-result-legacy.98e446e0.js",
+    "file": "assets/add-result-legacy.0ccfe9e6.js",
     "src": "components/molecules/add-result-legacy.js",
     "isDynamicEntry": true,
     "imports": [
@@ -72,7 +72,7 @@
     ]
   },
   "components/molecules/result-legacy.js": {
-    "file": "assets/result-legacy.2ea57fcd.js",
+    "file": "assets/result-legacy.6ea928a2.js",
     "src": "components/molecules/result-legacy.js",
     "isDynamicEntry": true,
     "imports": [
@@ -88,7 +88,7 @@
     "isEntry": true
   },
   "index.html": {
-    "file": "assets/index.9d06fe92.js",
+    "file": "assets/index.44d3ccaa.js",
     "src": "index.html",
     "isEntry": true,
     "imports": [
@@ -152,7 +152,7 @@
     ]
   },
   "components/molecules/add-result.js": {
-    "file": "assets/add-result.79fa21fa.js",
+    "file": "assets/add-result.678ffa1c.js",
     "src": "components/molecules/add-result.js",
     "isDynamicEntry": true,
     "imports": [
@@ -163,7 +163,7 @@
     ]
   },
   "components/molecules/result.js": {
-    "file": "assets/result.b807bff3.js",
+    "file": "assets/result.4554d8f7.js",
     "src": "components/molecules/result.js",
     "isDynamicEntry": true,
     "imports": [

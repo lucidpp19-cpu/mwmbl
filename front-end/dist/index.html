@@ -3,17 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The free, open-source and non-profit search engine." />
     <title>Mwmbl Search</title>
-    <script type="module" crossorigin src="/assets/index.9d06fe92.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill.c7c6310f.js">
+    <link rel="icon" href="/static/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/fonts/inter/inter.css" />
+    <link rel="stylesheet" href="/static/css/reset.css" />
+    <link rel="stylesheet" href="/static/css/theme.css" />
+    <link rel="stylesheet" href="/static/css/global.css" />
+    <script type="module" crossorigin src="/static/assets/index.44d3ccaa.js"></script>
+    <link rel="modulepreload" crossorigin href="/static/assets/modulepreload-polyfill.c7c6310f.js">
     <script type="module">try{import.meta.url;import("_").catch(()=>1);}catch(e){}window.__vite_is_modern_browser=true;</script>
     <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy build because dynamic import or import.meta.url is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
   </head>
   <body>
-    <main id="app"></main>
+    <mwmbl-app></mwmbl-app>
+    <header class="search-menu compact">
+      <a href="/" class="branding">
+        <img class="brand-icon" src="/static/images/logo.svg" width="40" height="40" alt="Mwmbl logo" />
+        <span class="brand-title">Mwmbl</span>
+      </a>
+      <form class="search-bar" action="/" method="get">
+        <i class="ph-magnifying-glass-bold"></i>
+        <input type="search" name="q" class="search-bar-input" placeholder="Search on Mwmbl..." autocomplete="off" />
+      </form>
+      <button type="button" class="local-ai-toggle" data-local-ai-toggle aria-label="Use local AI to improve result ranking">Local AI</button>
+      <span class="local-ai-status" data-local-ai-status role="status">AI off</span>
+      <a class="button" href="/accounts/login/">Login</a>
+      <a class="button" href="/accounts/signup/">Sign up</a>
+    </header>
+    <main><div class="main">
+      <h1>Welcome to Mwmbl</h1>
+      <p>The free, open-source and non-profit search engine.</p>
+      <p>Search the community-built index above, or enable Local AI to improve result ranking using your device.</p>
+    </div></main>
     
     <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-    <script nomodule crossorigin id="vite-legacy-polyfill" src="/assets/polyfills-legacy.00891307.js"></script>
-    <script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/index-legacy.298f21f8.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+    <script nomodule crossorigin id="vite-legacy-polyfill" src="/static/assets/polyfills-legacy.00891307.js"></script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="/static/assets/index-legacy.faddf883.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
   </body>
 </html>

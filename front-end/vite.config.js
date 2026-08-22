@@ -5,7 +5,7 @@ export default {
   root: './src',
   // Use the root path so the Vercel preview serves the app at `/`.
   // The backend can still mount the built assets under `/static/` in production.
-  base: '/',
+  base: '/static/',
   publicDir: '../assets',
   build: {
     outDir: '../dist',
