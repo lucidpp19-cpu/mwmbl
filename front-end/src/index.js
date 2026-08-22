@@ -8,8 +8,10 @@
 import 'vite/modulepreload-polyfill';
 import {setupResultsLoadedListener} from "./utils/events.js";
 import {setupStartupLoader} from "./utils/startup-loader.js";
+import {setupLocalAI} from "./utils/local-ai.js";
 
 setupStartupLoader();
+setupLocalAI();
 
 // Waiting for top-level await to be better supported.
 (async () => {

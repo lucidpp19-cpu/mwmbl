@@ -11,24 +11,52 @@ export function setupStartupLoader() {
   const quote = document.querySelector('[data-loader-quote]');
   if (!loader || !percent || !quote) return;
 
-  let progress = 0;
   let quoteIndex = 0;
-  const interval = window.setInterval(() => {
-    progress = Math.min(progress + Math.ceil(Math.random() * 12), 92);
-    percent.textContent = `${progress}%`;
-    if (progress > 35 && progress < 92 && progress % 3 === 0) {
+  let modelProgress = 0;
+  let modelReady = false;
+  let pageReady = document.readyState === 'complete';
+  let finished = false;
+
+  const update = (value) => {
+    modelProgress = Math.max(modelProgress, Math.min(99, Math.round(value)));
+    percent.textContent = `${modelProgress}%`;
+    if (modelProgress > 0 && modelProgress % 20 < 4) {
       quoteIndex = (quoteIndex + 1) % QUOTES.length;
       quote.textContent = QUOTES[quoteIndex];
     }
-  }, 110);
-
-  const finish = () => {
-    window.clearInterval(interval);
-    percent.textContent = '100%';
-    window.setTimeout(() => loader.classList.add('is-hidden'), 180);
   };
 
-  if (document.readyState === 'complete') finish();
-  else window.addEventListener('load', finish, { once: true });
-  window.setTimeout(finish, 2800);
+  const finish = () => {
+    if (finished || !pageReady || !modelReady) return;
+    finished = true;
+    update(100);
+    window.setTimeout(() => loader.classList.add('is-hidden'), 260);
+  };
+
+  window.addEventListener('load', () => {
+    pageReady = true;
+    finish();
+  }, { once: true });
+
+  window.addEventListener('mwmbl:model-progress', (event) => {
+    const progress = Number(event.detail?.progress);
+    if (Number.isFinite(progress)) update(progress * 100);
+  });
+  window.addEventListener('mwmbl:model-ready', () => {
+    modelReady = true;
+    finish();
+  }, { once: true });
+  window.addEventListener('mwmbl:model-error', () => {
+    modelReady = true;
+    quote.textContent = 'Search is ready without the local model.';
+    finish();
+  }, { once: true });
+
+  window.setTimeout(() => {
+    if (!modelReady) {
+      quote.textContent = 'Local AI is still downloading — keep this tab open.';
+    }
+  }, 8000);
+
+  update(0);
 }
